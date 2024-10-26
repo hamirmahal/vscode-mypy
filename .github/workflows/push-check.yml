@@ -125,5 +125,13 @@ jobs:
         run: npm run pretest
         shell: bash
 
+      - name: Start X Virtual Framebuffer (xvfb)
+        run: |
+          sudo apt-get update
+          sudo apt-get install xvfb
+          export DISPLAY=:99
+          nohup xvfb-run -a npm run tests &
+        shell: bash
+
       - name: Run TS tests
         run: npm run tests
