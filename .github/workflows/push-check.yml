@@ -126,7 +126,7 @@ jobs:
         shell: bash
 
       - name: Run TS tests
-        uses: GabrielBB/xvfb-action@v1.6
+        uses: coactions/setup-xvfb@v1
         with:
           run: npm run tests
           working-directory: ${{ env.special-working-directory }}
