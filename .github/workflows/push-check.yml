@@ -126,7 +126,4 @@ jobs:
         shell: bash
 
       - name: Run TS tests
-        uses: coactions/setup-xvfb@v1.0.1
-        with:
-          run: npm run tests
-          working-directory: ${{ env.special-working-directory }}
+        run: npm run tests
